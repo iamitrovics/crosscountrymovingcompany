@@ -40,7 +40,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="header-text">
                     <div class="orange-circle-sm">
                         <div class="black-circle"></div>
-                        <!-- /.black-circle -->
                     </div>
                     <!-- /.orange-circle-sm -->   
                 </div>
