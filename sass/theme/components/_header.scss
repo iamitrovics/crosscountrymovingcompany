@@ -1,0 +1,756 @@
+/*===============================
+=           Top Area            =
+===============================*/
+
+#menu_area {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 176px;
+    z-index: 9997;
+    background-color: #fff;
+    @include animate-fade;
+    @include media-breakpoint-only(lg) {
+        height: 100px;
+    }
+    @include media-breakpoint-down(md) {
+        height: 80px;
+    }
+    >.container {
+        height: 100%;
+        .row {
+            height: 100%;
+        }
+    }
+    &.sticky {
+        height: 100px;
+        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+        @include media-breakpoint-down(md) {
+            height: 80px;
+        }
+    }
+    .navbar-expand-lg {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+    .navbar-collapse {
+        display: flex!important;
+    }
+    #top__mobile {
+        @media (min-width: 1200px) {
+            display: none;
+        }
+        a {
+            display: block;
+            width: 55px;
+            height: 30px;
+            span {
+                height: 4px;
+                border-radius: 6px;
+                background-color: $orange;
+                width: 35px;
+                display: block;
+                float: right;
+                @include animate-fade;
+                margin-top: 3px;
+                margin-bottom: 3px;
+            }
+            &:hover {
+                span {
+                    background-color: $dark;
+                }
+            }
+        }
+    }
+    .navbar {
+        padding: 0;
+        height: 100%;
+        .navbar-brand {
+            font-size: unset;
+            padding: 0;
+            img {
+                @media (min-width: 1400px) {
+                    min-width: 191px;
+                }
+            }
+        }
+    }
+    .call-btn {
+        margin-left: auto;
+        a {
+            padding-left: 45px;
+            padding-right: 45px;
+            height: 76px;
+            line-height: 76px;
+            border-radius: 25px;
+            background: $dark;
+            display: block;
+            font-family: $stol-reg;
+            font-size: 1em;
+            letter-spacing: 0.1em;
+            text-align: center;
+            color: #fff; 
+            @media (max-width: 1499px) {
+                font-size: 0;
+                padding: 10px;
+                background: transparent;
+                height: auto;
+                line-height: normal;
+            }
+            &:hover {
+                background-color: $orange;
+                @media (max-width: 1499px) {
+                    background: transparent;
+                    i {
+                        color: $orange;
+                    }
+                }
+            }
+            i {
+                display: none;
+                color: $dark;
+                font-size: 22px;
+                @include animate-fade;
+                @media (max-width: 1499px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+
+/*=====  End of Top Area  ======*/
+
+
+/*===============================
+=           Masheader           =
+===============================*/
+
+#masheader {
+    position: relative;
+    padding-bottom: 144px;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-only(md) {
+        padding-bottom: 80px!important;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-bottom: 50px!important;
+    }
+    .header-text, h1 {
+        position: relative;
+        z-index: 1;
+        @include media-breakpoint-only(md) {
+            padding-left: 15px;
+        }
+    }
+    &.header-home {
+        padding-top: 150px;
+        @include breakpoint (desktop) {
+            padding-top: 120px;
+        }
+        @include media-breakpoint-only(lg) {
+            padding-top: 80px;
+        }
+        @include media-breakpoint-only(md) {
+            padding-top: 70px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding-top: 0px!important;
+        }
+        .caption {
+            h1 {
+                max-width: 600px;
+            }
+            @include media-breakpoint-only(md) {
+                width: 40%;
+                min-height: auto;
+            }
+        }
+        .image-artwork {
+            max-width: 1115px;
+            width: 58.07vw;
+            @include media-breakpoint-only(lg) {
+                width: 55vw;
+            }
+        }
+     
+        #booking-div {
+            &:before {
+                position: absolute;
+                display: block;
+                content: '';
+                left: -175px;
+                top: 0;
+                width: 350px;
+                height: 350px;
+                background: #f6f7f9;
+                border-radius: 50%;
+                z-index: -1;
+                @include media-breakpoint-down(md)  {
+                    display: none;
+                }
+            }
+        }
+        .header-text {
+            .orange-circle-sm {
+                position: relative;
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+                .black-circle {
+                    position: absolute;
+                    top: 6px;
+                    left: -67px;
+                }
+            }
+        }
+    }
+    &.header-regular {
+        padding-top: 50px;
+        padding-bottom: 95px;
+        .image-artwork {
+            top: 70px;
+        }
+        .header-text {
+            min-height: 240px;
+            display: flex;
+            flex-direction: column;
+            @include media-breakpoint-down(lg) {
+                min-height: auto;
+            }
+            .orange-circle-sm {
+                display: flex;
+                margin-top: auto;
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+            }
+            img {
+                align-self: start;
+                margin-top: 40px;
+            }
+        }
+        #booking-div {
+            &:before {
+                display: none;
+            }
+        }
+        .caption {
+            h1 {
+                @include media-breakpoint-up(xl) {
+                    max-width: 580px;
+                }
+            }
+        }
+    }
+    &.header-about {
+        padding-top: 30px;
+        padding-bottom: 55px;
+        .caption {
+            margin-bottom: 0;
+            .header-text {
+                padding-left: 40px;
+                @include media-breakpoint-down(lg) {
+                    padding-left: 0;
+                }
+            }
+        }
+        h1 {
+            text-transform: uppercase;
+            margin-bottom: 100px;
+            margin-top: 60px;
+            padding-left: 40px;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 30px;
+                padding-left: 0;
+            }
+            @include media-breakpoint-only(md) {
+                margin-top: 0;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 30px;
+            }
+        }
+        .image-artwork {
+            max-width: 954px;
+            position: relative;
+            z-index: 2;
+
+        }
+        h2 {
+            @include subheading-font2;
+            color: $orange;
+            margin-bottom: 30px;
+        }
+        .abh-circles {
+            position: relative;
+            left: -150px;
+            height: 170px;
+            background-color: #fff;
+            width: 260px;
+            @include media-breakpoint-down(lg) {
+                left: 0;
+            }
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+            .orange-circle {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+                background-color: $orange;
+                position: relative;
+            }
+            .white-circle {
+                width: 156px;
+                height: 156px;
+                border-radius: 50%;
+                background: #696d77;
+                mix-blend-mode: screen;
+                position: absolute;
+                left: 104px;
+                top: 11px;
+            }
+        }
+        .header-text {
+            .orange-circle-sm {
+                position: relative;
+                margin-bottom: 120px;
+                left: -40px;
+                @include media-breakpoint-down(lg) {
+                    left: 0;
+                    margin-bottom: 50px;
+                }
+                @include media-breakpoint-down(sm) {
+                    display: none;
+                }
+                .black-circle {
+                    position: absolute;
+                    top: 30px;
+                    left: 63px;
+                }
+            }
+        }
+    }
+    &.full-width {
+        .image-artwork {
+            top: 0;
+            right: auto;
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &.moving-header {
+        h1 {
+            max-width: 690px!important;
+        }
+        .header-text {
+            p {
+                max-width: 690px;
+                &:first-child {
+                    @include subheading-font2;
+                }
+                &:last-of-type {
+                    color: #EAB782;
+                }
+            }
+            
+        }
+    }
+    &.storage-header {
+        padding-top: 40px;
+        #booking-div-wrap {
+            margin-top: 160px;
+            @include breakpoint (desktop) {
+                margin-top: 90px;
+            }
+            @include media-breakpoint-only(lg) {
+                margin-top: 80px;
+            }
+            @include media-breakpoint-only(md) {
+                margin-top: 70px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-top: 40px;
+            }
+            #booking-div {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    &.header-reviews {
+        h1 {
+            max-width: 100%!important;
+            text-align: center;
+            margin-bottom: 120px;
+            @include breakpoint (desktop) {
+                margin-bottom: 90px;
+            }
+            @include media-breakpoint-only(lg) {
+                margin-bottom: 80px;
+            }
+            @include media-breakpoint-only(md) {
+                margin-bottom: 70px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 40px;
+            }
+        }
+        .add-review-btn {
+            position: relative;
+            z-index: 1;
+            a {
+                @include subheading-font2;
+                display: inline-block;
+                padding-left: 130px;
+                padding-right: 130px;
+                height: 86px;
+                line-height: 86px;
+                border-radius: 25px;
+                background:$orange;
+                text-align: center;
+                text-transform: uppercase;
+                color: #fff;
+                @include breakpoint (desktop) {
+                    padding-left: 100px;
+                    padding-right: 100px;
+                }
+                @include media-breakpoint-only(lg) {
+                    height: 75px;
+                    line-height: 75px;
+                    padding-left: 70px;
+                    padding-right: 70px;
+                }
+                @include media-breakpoint-only(md) {
+                    height: 65px;
+                    line-height: 65px;
+                    padding-left: 50px;
+                    padding-right: 50px;
+                }
+                @include media-breakpoint-down(sm) {
+                    display: block;
+                    line-height: 55px;
+                    height: 55px;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                }
+                &:hover {
+                    background: $dark;
+                }
+
+            }
+        }
+    }
+    &.gallery-header {
+        p {
+            @include subheading-font2;
+            max-width: 520px;
+        }
+    }
+    .image-artwork {
+        position: absolute;
+        right: 0px;
+        top: 20px;
+        width: 100%;
+        margin-left: auto;
+        @include media-breakpoint-only(lg) {
+        }
+        @include media-breakpoint-only(md) {
+        }
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        img {
+            display: block;
+            margin-left: auto;
+        }
+    }
+    .image-artwork-mob {
+        text-align: center;
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+        img {
+            max-height: 200px;
+        }
+    }
+    .caption {
+        width: 100%;
+        min-height: 300px;
+        margin-bottom: 40px;
+        /*@include centre(y);
+        z-index: 2;
+        @include breakpoint (desktop) {
+            margin-top: -50px;
+        }
+        @include media-breakpoint-only(lg) {
+            margin-top: -50px;
+        }*/
+        @include media-breakpoint-down(md) {
+            min-height: auto;
+        }
+        /*@include media-breakpoint-down(sm) {
+            @include clear-pos;
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }*/
+    }
+    h1 {
+        @include page-title;
+        max-width: 560px;
+        margin-bottom: 30px;
+        @include breakpoint (desktop) {
+            max-width: 450px;
+        }
+        @include media-breakpoint-only(lg) {
+            max-width: 450px;
+        }
+        @include media-breakpoint-only(md) {
+            max-width: 330px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-top: 35px;
+            text-align: center;
+        }
+    }
+    p {
+        max-width: 380px;
+        font-size: 0.875em;
+        line-height: 1.4;
+        color: #63656a;
+    }
+    .orange-circle-big {
+        position: absolute; 
+        left: calc(50% + 55px);
+        bottom: -90px;
+        z-index: 1;
+        @include media-breakpoint-only(md) {
+            bottom: -50px;
+        }
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+}
+
+
+/*=====  End of Masheader  ======*/
+
+
+/*===============================
+=           Booking Div          =
+===============================*/
+
+#booking-div-wrap {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #booking-div {
+        position: relative;
+        z-index: 5;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 1121px;
+        &:after {
+            content: '';
+            display: block;
+            @include centre(both);
+            width: 90%;
+            height: 100%;
+            border-radius: 50px;
+            background: #fff;
+            opacity: 0.5;
+            box-shadow: 0px 30px 76px rgba(0, 0, 0, 0.08);
+            top: calc(50% + 30px);
+            z-index: -1;
+        }
+        @include media-breakpoint-only(lg) {
+            
+        }
+        @include media-breakpoint-only(md) {
+           
+        }
+        @include media-breakpoint-down(sm) {
+            padding: 15px;
+            height: auto;
+            width: 100%;
+            @include clear-pos;
+            bottom: auto;
+            border-radius: 35px;
+        }
+        .book-wrapper {
+            padding: 40px 65px 62px 65px;
+            background-color: #fff;
+            border-radius: 50px;
+            -webkit-box-shadow: 0px 40px 76px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 40px 76px rgba(0, 0, 0, 0.08);
+            @include media-breakpoint-only(md) {
+                padding: 40px 35px 40px 35px;
+            }
+            @include media-breakpoint-down(sm) {
+                padding: 30px 25px 30px 25px;
+            }
+            .quote-title {
+                display: block;
+                @include subheading-font2;
+                color: #313235;
+                text-transform: capitalize;
+                margin-bottom: 10px;
+                @include media-breakpoint-down(sm) {
+                   text-align: center;
+                }
+            }
+        }
+    } 
+    .form-wrapper {
+        .row {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .col {
+            padding-left: 10px;
+            padding-right: 10px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            @include media-breakpoint-down(sm) {
+               min-width: 100%;
+            }
+        }
+        .wpcf7-form-control-wrap {
+            position: initial;
+        }
+
+        // vlaidate
+        .fieldset-cf7mls-wrapper .wpcf7-not-valid-tip {
+            position: absolute;
+            bottom:-25px;
+            @include media-breakpoint-down(md) {
+                position: relative;
+                bottom:auto;
+                margin-top: 10px;
+            }
+        }
+        .wpcf7 form .wpcf7-response-output {
+            padding:0px;
+            margin:0px;
+            border:none;
+            display: none!important;
+        }
+        .fieldset-cf7mls {
+            display: flex;
+            @include media-breakpoint-down(md) {
+                display: block;
+            }
+        }
+        .cf7mls-btns {
+            // width: 171px;
+
+            max-width: 340px;
+            flex:1;
+
+            button[type="button"] {
+                @include orange-btn;
+                @include media-breakpoint-down(sm) {
+                    margin:0px auto;
+                    margin-bottom: 10px;
+                }
+             }            
+        }
+        .row {
+            flex:1;
+        }
+        [data-cf7mls-order="0"] {
+            .cf7mls-btns {
+                max-width: 171px;
+            }
+        }
+        [data-cf7mls-order="3"] {
+            .row {
+                width: 100%;
+                flex: auto;
+                .col {
+                    &:last-child {
+                        max-width: 171px;
+                    }
+                }
+            }
+        }
+        .cf7mls_back {
+            @include orange-btn;
+            margin-left: 20px;
+            width: 171px;
+            &:hover {
+                background-image:url('../img/ico/long-arrow-left.png');
+            }         
+        }
+        .bootstrap-select {
+            width: 100%;
+        }
+        .form-group {
+            position: relative;
+            width: 100%;
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 20px;
+            }
+            i {
+                @include centre(y);
+                left: 20px;
+                font-size: 22px;
+                color: $dark2;
+                @include media-breakpoint-down(sm) {
+                    font-size: 18px;
+                    @include clear-pos;
+                    position: absolute;
+                    left:20px;
+                    top:15px;
+                }
+            }
+        }
+        input[type=text], input[type=number], input[type=email], input[type=tel], select  {
+            @include input-style;
+            @include media-breakpoint-only(md) {
+                padding-left: 50px;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-left: 40px;
+            }
+        }
+       
+        button[type="submit"] {
+           @include orange-btn;
+           margin: 25px 0px 26px;
+        }
+    }
+}
+
+
+/*=====  End of Booking Div  ======*/
+
+.city-artwork {
+    overflow: hidden;
+    img {
+        border-radius: 100%;
+        max-width: 750px;
+    }
+}
+
+.city-image-mob {
+    img {
+        border-radius:100%;
+    }
+}

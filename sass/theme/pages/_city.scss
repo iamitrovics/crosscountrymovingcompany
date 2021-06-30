@@ -1,0 +1,190 @@
+//CITY
+
+.cities-page {
+    #services-detailed {
+        padding-bottom: 90px;
+        @include breakpoint (desktop) {
+            padding-bottom: 80px;
+        }
+        @include media-breakpoint-only(lg) {
+            padding-bottom: 70px;
+        }
+        @include media-breakpoint-only(md) {
+            padding-bottom: 60px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding-bottom: 50px;
+        }
+    }
+    #bottom-cta {
+        padding-top: 145px;
+        padding-bottom: 105px;
+        position: relative;
+        min-height: auto;
+        margin-bottom: 0!important;
+        @include breakpoint (desktop) {
+            padding-top: 120px;
+            padding-bottom: 90px;
+        }
+        @include media-breakpoint-only(lg) {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+        @include media-breakpoint-only(md) {
+            padding-top: 80px;
+            padding-bottom: 70px;
+        }
+        @include media-breakpoint-down(sm) {
+            padding-top: 55px;
+            padding-bottom: 40px;
+        }
+        h2 {
+            margin-bottom: 60px;
+            font-size: 3em;
+            @include media-breakpoint-only(md) {
+               margin-bottom: 40px;
+            }
+            @include media-breakpoint-down(sm) {
+               margin-bottom: 30px;
+               font-size: 2em;
+            }
+        }
+        &:before {
+            display: block;
+            content: '';
+            width: 180px;
+            height: 180px;
+            background: $orange;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(50% + 55px);
+            top: -90px;
+            z-index: 1;
+            @include media-breakpoint-down(sm) {
+                display: none!important;
+            }
+        }
+        &:after {
+            position: absolute;
+            bottom: 32px;
+            right: 0;
+            content: '';
+            display: block;
+            width: 44vw;
+            height: 1px;
+            background: $orange;
+            @include media-breakpoint-down(sm) {
+                display: none!important;
+            }
+        }
+        .bottom-cta-text {
+            position: relative;
+            &:after {
+                position: absolute;
+                right: -120px;
+                top: -120px;
+                content: '';
+                display: block;
+                width: 268px;
+                height: 268px;
+                background: #22252B;
+                border-radius: 50%;
+                mix-blend-mode: screen;
+                @include breakpoint (desktop) {
+                    right: 0;
+                    width: 200px;
+                    height: 200px;
+                }
+                @include media-breakpoint-down(lg) {
+                    right: 0;
+                    width: 200px;
+                    height: 200px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    top: -60px;
+                    right: 0;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            h3 {
+                color:$orange;
+                font-size: 2em;
+                margin-bottom: 30px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.75em;
+                }
+            }
+            ul {
+                padding-left: 20px;
+                margin-bottom: 30px;
+                @include list-style;
+                li {
+                    color:$white;
+                    &:before {
+                        color:$orange;
+                    }
+                }
+            }
+            p {
+                color: rgba(#fff, 0.91);
+                font-size: 1.250em;
+                line-height: 1.4;
+                @include media-breakpoint-only(lg) {
+                    font-size: 1.2em;
+                }
+                @include media-breakpoint-only(md) {
+                    font-size: 1.1em;
+                }
+                @include media-breakpoint-down(sm) {
+                    font-size: 1em;
+                }
+                a {
+                    color:$orange;
+                }
+            }
+        }
+    }
+}
+
+#masheader .city-hero--text {
+    p {
+        max-width: 650px;
+    }
+}
+
+.city-images {
+    img {
+        object-fit: cover;
+        max-height: 600px;
+    }
+}
+
+
+#services-page {
+    #services-detailed {
+        .city-detailed {
+            padding-top: 50px;
+            h2 {
+                font-size: 3em;
+                margin-bottom: 30px;
+                @include media-breakpoint-down(sm) {
+                    font-size: 2em;
+                }
+            }
+            h3 {
+                font-size: 2.5em;
+                line-height: 1.3;
+                @include media-breakpoint-down(sm) {
+                    font-size: 1.75em;
+                }
+            }
+            p {
+                a {
+                    color:$orange;
+                }
+            }
+        }
+    }
+}
