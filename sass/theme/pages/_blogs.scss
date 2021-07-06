@@ -291,6 +291,23 @@
         iframe {
             max-width: 100%;
         }
+    }
+    .single-table {
+        @include media-breakpoint-down(sm) {
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        th {
+            border: 1px solid;
+            background: rgba(238, 140, 33, 0.3);
+            color: #000;
+            padding: 3px 10px;
+        }
+        td {
+            border: 1px solid;
+            padding: 3px 10px;
+        }
     }    
 	.blog-detailed {
 		&--intro {
