@@ -114,6 +114,14 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         </div>
                                         <!-- /.row -->
 
+                                    <?php elseif( get_row_layout() == 'quote_cta' ): ?>
+
+                                        <div class="quote-cta--single">
+                                            <span class="title"><?php the_sub_field('cta_title'); ?></span>
+                                            <a href="#bottom-form" class="btn-cta"><?php the_sub_field('button_label'); ?></a>
+                                        </div>
+                                        <!-- // single  -->                                                
+
                                         <?php elseif( get_row_layout() == 'table' ): ?>
 
                                         <table style="width:100%" class="single-table">
@@ -201,6 +209,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 
     </div>
     <!-- /.blog-detailed -->   
+
+    <div id="bottom-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    
+                    <div id="quote-intro">
+                        <div class="quote-intro-in">
+                            <h2>QUICK MOVING ESTIMATE</h2>
+                            <?php echo do_shortcode('[contact-form-7 id="62855" title="Quick Quote"]'); ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- // row  -->
+        </div>
+        <!-- // container  -->
+    </div>
+    <!-- // bottom form  -->
 
     <?php include(TEMPLATEPATH . '/inc/inc-bottom.php'); ?>
    
