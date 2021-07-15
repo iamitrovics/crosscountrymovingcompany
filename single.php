@@ -230,7 +230,6 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
     <!-- // bottom form  -->
 
-    <?php include(TEMPLATEPATH . '/inc/inc-bottom.php'); ?>
    
 <?php
 get_footer();
