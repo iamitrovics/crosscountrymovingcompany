@@ -343,8 +343,17 @@
                     font-size: 0.875em;
                     line-height: 2;
                     color: #000;
+                    @media (max-width: 767px) {
+                        display: block;
+                    }
                     &.date {
-                        margin-right: 65px;
+                        margin-right: 40px;
+                    }
+                    &.cat-link {
+                        a {
+                            color: $orange;
+                        }
+                        margin-right: 40px;
                     }
 				}
 			}

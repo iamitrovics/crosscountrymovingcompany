@@ -22,6 +22,16 @@ $container = get_theme_mod( 'understrap_container_type' );
                             <div class="col-md-10">
                                 <div class="blog-info">
                                     <span class="date"><?php echo get_the_date( 'F j, Y' ); ?></span>
+                                    <span class="cat-link">
+                                        Posted in
+                            
+                                        <?php
+                                        global $post;
+                                        $categories = get_the_category($post->ID);
+                                        $cat_link = get_category_link($categories[0]->cat_ID);
+                                        echo '<a href="'.$cat_link.'">'.$categories[0]->cat_name.'</a>' 
+                                        ?> 
+                                    </span>
                                     <span class="author">By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
                                 </div>
                                 <!-- /.blog-info -->
