@@ -241,5 +241,8 @@
             $(this).outerHeight(20).outerHeight(this.scrollHeight);
         });
         $('textarea').trigger('input');
+
+		$('.blog-content a').attr("target","_blank");
+
 	});
 })(jQuery);
