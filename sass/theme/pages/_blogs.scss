@@ -1601,6 +1601,12 @@
     @include breakpoint(desktop) {
         left:2vw;
     }
+    @media screen and (min-width:1200px) and (max-width:1300px) {
+        left:20px;
+        width: 260px;
+        padding-left: 25px;
+        padding-right: 15px;
+    }
     @include media-breakpoint-only(lg) {
         left:10px;
         padding-left: 25px;
