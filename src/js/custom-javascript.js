@@ -215,6 +215,8 @@
 		$('#top-cta .features-list .feature-box h3').matchHeight();
 		$('#top-cta .features-list .feature-box p').matchHeight();
 
+		$('#featured-main .pros-wrapper .pros-card').matchHeight();
+
         $('.blog-locations .location-box h2').matchHeight();
         $('.blog-locations .location-box p').matchHeight();
 
@@ -234,7 +236,22 @@
                 }
               }
             });
-          });             
+          });            
+		  
+		  $(function() {
+			$('#side-nav ul li a').click(function() {
+			  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+				  $('html, body').animate({
+					scrollTop: target.offset().top - 80
+				  }, 1000);
+				  return false;
+				}
+			  }
+			});
+		  });        
 
         //auto-resize textarea height
         $('textarea').on('input', function() {
@@ -243,6 +260,19 @@
         $('textarea').trigger('input');
 
 		$('.blog-content a').attr("target","_blank");
+
+		// $(document).ready(function() {
+		// 	var s = $("#side-nav");
+		// 	var pos = s.position();					   
+		// 	$(window).scroll(function() {
+		// 		var windowpos = $(window).scrollTop();
+		// 		if (windowpos >= pos.top & windowpos > 1200) {
+		// 			s.addClass("stick");
+		// 		} else {
+		// 			s.removeClass("stick");	
+		// 		}
+		// 	});
+		// });		
 
 	});
 })(jQuery);
