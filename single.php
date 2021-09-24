@@ -32,7 +32,14 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         echo '<a href="'.$cat_link.'">'.$categories[0]->cat_name.'</a>' 
                                         ?> 
                                     </span>
-                                    <span class="author">By <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a></span>
+                                    <div class="author">
+                                        <?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
+                                        <div class="author-content">
+                                            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php the_author(); ?></a>
+                                            <p><?php the_author_description(); ?></p>
+                                        </div>
+                                        <!-- /.author-content -->
+                                    </div>
                                 </div>
                                 <!-- /.blog-info -->
                                 <h1><?php the_title(); ?></h1>
