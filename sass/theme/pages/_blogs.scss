@@ -13,7 +13,7 @@
 }
 
 
-#blog-listing {
+#blog-listing, #advanced-posts {
 	padding-top: 50px;
     @include breakpoint (desktop) {
     }
@@ -855,6 +855,37 @@
     .author a {
         color:$orange;
     }    
+}
+
+#advanced-posts {
+    padding: 20px 0;
+    .blog-photo {
+        height: 200px;
+        margin-bottom: 20px;
+        img {
+            border-radius: 20px;
+        }
+        a {
+            &:after {
+                border-radius: 20px;
+            }
+        }
+    }
+    .blog-content {
+        .blog-content--in {
+            padding: 0;
+        }
+        width: 100%;
+        margin-top: 0;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        color: #000;
+    }
 }
 
 // Featured Article
