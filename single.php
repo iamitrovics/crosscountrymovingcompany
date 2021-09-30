@@ -315,24 +315,20 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <div class="advanced-posts-list">
                         <div class="row">
 
-                        <?php $orig_post = $post;
-                                global $post;
-                                $categories = get_the_category($post->ID);
-                                if ($categories) {
-                                $category_ids = array();
-                                foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+                        <?php
+                            $categories =   get_the_category();
+                            // print_r($categories);
+                            $rp_query   =  new WP_Query ([
+                                'posts_per_page'        =>  3,
+                                'post__not_in'          =>  [ $post->ID ],
+                                'cat'                   =>  !empty($categories) ? $categories[0]->term_id : null,
 
-                                $args=array(
-                                'category__in' => $category_ids,
-                                'post__not_in' => array($post->ID),
-                                'posts_per_page'=> 3, // Number of related posts that will be shown.
-                                'ignore_sticky_posts'=>1
-                                );
+                            ]);
 
-                                $my_query = new wp_query( $args );
-                                if( $my_query->have_posts() ) {
-                                while( $my_query->have_posts() ) {
-                                $my_query->the_post();?>
+                            if ( $rp_query->have_posts() ) {
+                                while( $rp_query->have_posts() ) {
+                                    $rp_query->the_post();
+                                    ?>
 
                                 <div class="col-md-4">
                                     <div class="blog-box">
@@ -365,13 +361,14 @@ $container = get_theme_mod( 'understrap_container_type' );
                                 </div>
                                 <!-- /.col-md-4 -->
 
-                                <?
+                                <?php
+                                    }
+
+                                    wp_reset_postdata();
+
                                 }
-                                echo '</ul></div>';
-                                }
-                                }
-                                $post = $orig_post;
-                                wp_reset_query(); ?>
+
+                            ?>
 
                         </div>
                         <!-- /.row -->
