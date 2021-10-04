@@ -103,6 +103,48 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         </div>
                                         <!-- // video  -->
 
+                                    <?php elseif( get_row_layout() == 'featured_article' ): ?>    
+                                        <?php
+                                            $post_objects = get_sub_field('featured_article_list');
+
+                                            if( $post_objects ): ?>
+                                                <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+                                                    <?php setup_postdata($post); ?>
+                                                        
+                                                    <div class="featured-article">
+                                                        <div class="blog-box">
+                                                            <div class="blog-photo">
+                                                                <a href="<?php echo get_permalink(); ?>" target="_blank">
+                                                                        <?php
+                                                                        $imageID = get_field('featured_image_blog');
+                                                                        $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
+                                                                        $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                                                        ?> 
+
+                                                                        <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                                                                </a>
+                                                            </div>
+                                                            <!-- /.blog-photo -->
+                                                            <div class="blog-content">
+                                                                <div class="blog-content--in">
+                                                                    <a href="<?php echo get_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
+                                                                    <div class="read-more">
+                                                                        <a href="<?php echo get_permalink(); ?>">Read More</a>
+                                                                    </div>
+                                                                    <!-- /.read-more -->
+                                                                </div>
+                                                                <!-- /.blog-content--in -->
+                                                            </div>
+                                                            <!-- /.blog-content -->
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.featured-article -->
+                                                        
+                                                <?php endforeach; ?>
+                                            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                                        <?php endif; ?>
+                                        <?php wp_reset_postdata(); ?>
+
                                     <?php elseif( get_row_layout() == 'accordion' ): ?> 
 
                                         <div class="row blog-detailed--accordion-wrap">
