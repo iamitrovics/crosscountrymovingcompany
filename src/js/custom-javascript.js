@@ -223,6 +223,56 @@
         $('.city-reviews .review-box .review-author').matchHeight();
         $('.city-reviews .review-box .review-text, .services-list .service-box .service-text p, #blog-listing .blog-content p').matchHeight();
 
+        $('#nav-slider').slick({
+			infinite: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: false,
+			autoplay: true,
+			autoplaySpeed: 8000,
+			responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			  {
+			  breakpoint: 991,
+			  settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			  {
+				breakpoint: 767,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			]
+		  });		
+
+		  $('.next-arrowx').on('click', function(){
+			$('#nav-slider').slick('slickNext');
+		 });
+		 $('.prev-arrowx').on('click', function(){
+			$('#nav-slider').slick('slickPrev');
+		 });		  
+
         $(function() {
             $('.quote-cta--single a.btn-cta').click(function() {
               if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

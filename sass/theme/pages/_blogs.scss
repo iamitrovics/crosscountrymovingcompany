@@ -1808,3 +1808,86 @@
         }
     }
 }
+
+#post-nav {
+    margin-bottom: 50px;
+    .container {
+        width: 100%;
+        position: relative;
+    }
+    .post-wrapper {
+        position: relative;
+        background: #ecf2f6;
+        padding:35px;
+        border-radius: 40px;
+    }
+    .slider-nav {
+        button {
+            width: 40px;
+            height: 40px;
+            background: $dark2;
+            border:0;
+            padding: 0;
+            border-radius: 50%;
+            display: inline-block;
+            @include animate-fade;
+            z-index:1040;
+            &.prev-arrowx {
+                left:35px;
+                @include centre(y);
+            }
+            &.next-arrowx {
+                right:35px;
+                left:auto;
+                @include centre(y);
+            }
+            i {
+                color: #fff;
+                text-align: center;
+                font-size: 24px;
+            }
+            &:hover {
+                background-color: $orange;
+            }
+        }
+    } 
+    #nav-slider {
+        .item {
+            .nav-col {
+                text-align: center;
+                &:hover {
+                    span {
+                        color:$orange;
+                    }
+                }
+                .icon {
+                    margin:0px auto;
+                    width: 66px;
+                    height: 66px;
+                    border-radius: 16px;
+                    background: $orange;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    img {
+                        @include centre(both);
+                        filter: brightness(0) invert(1);
+                    }                
+                }
+                span {
+                    display: block;
+                    margin-top: 15px;
+                    font-family: $stol-med;
+                    font-size: 1.125em;
+                    line-height: 1.222;
+                    color: $dark2;
+                    @include animate-fade;
+                    @include media-breakpoint-down(sm) {
+                        font-size: 1em;
+                    }                    
+                }
+            }
+        }
+    }    
+}
