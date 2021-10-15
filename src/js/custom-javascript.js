@@ -226,7 +226,7 @@
         $('#nav-slider').slick({
 			infinite: true,
 			speed: 300,
-			slidesToShow: 3,
+			slidesToShow: 4,
 			slidesToScroll: 1,
 			dots: false,
 			arrows: false,
@@ -246,7 +246,7 @@
 			  {
 			  breakpoint: 991,
 			  settings: {
-				  slidesToShow: 2,
+				  slidesToShow: 3,
 				  slidesToScroll: 1,
 				  autoplay: true,
 				  dots: false,

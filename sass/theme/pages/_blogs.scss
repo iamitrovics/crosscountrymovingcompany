@@ -1833,11 +1833,11 @@
             @include animate-fade;
             z-index:1040;
             &.prev-arrowx {
-                left:35px;
+                left:25px;
                 @include centre(y);
             }
             &.next-arrowx {
-                right:35px;
+                right:25px;
                 left:auto;
                 @include centre(y);
             }
@@ -1879,7 +1879,7 @@
                     display: block;
                     margin-top: 15px;
                     font-family: $stol-med;
-                    font-size: 1.125em;
+                    font-size: 1em;
                     line-height: 1.222;
                     color: $dark2;
                     @include animate-fade;
