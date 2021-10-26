@@ -863,8 +863,10 @@
         margin: 0 10px;
         border: 1px solid $orange;
         border-radius: 40px;
+        max-width: 316px;
         @include media-breakpoint-down(sm) {
             margin-bottom: 20px;
+            max-width: none;
         }
         .service-box-in {
             text-align: center;
