@@ -1,0 +1,301 @@
+// Import fonts and fonts variables
+
+@font-face {
+    font-family: 'Stolzl Bold';
+    src: url('../fonts/Stolzl-Bold.woff2') format('woff2'),
+        url('../fonts/Stolzl-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stolzl Medium';
+    src: url('../fonts/Stolzl-Medium.woff2') format('woff2'),
+        url('../fonts/Stolzl-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stolzl Regular';
+    src: url('../fonts/Stolzl-Regular.woff2') format('woff2'),
+        url('../fonts/Stolzl-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?pq56ko');
+    src:  url('../fonts/icomoon.eot?pq56ko#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?pq56ko') format('truetype'),
+      url('../fonts/icomoon.woff?pq56ko') format('woff'),
+      url('../fonts/icomoon.svg?pq56ko#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-angle-left:before, .fa-angle-left:before {
+    content: "\e916";
+  }
+  .icon-phone-alt:before, .fa-phone-alt:before {
+    content: "\e915";
+  }
+  .icon-user-o:before, .fa-user-o:before {
+    content: "\e914";
+  }
+  
+  .icon-envelope:before, .fa-envelope:before {
+    content: "\e900";
+  }
+  .icon-phone-alt:before, .fa-phone-alt-o:before, .fal.fa-phone-alt:before {
+    content: "\e901";
+  }
+  .icon-star:before, .fa-star:before {
+    content: "\e902";
+  }
+  .icon-check:before, .fa-check:before {
+    content: "\e903";
+  }
+  .icon-search-plus:before, .fa-search-plus:before {
+    content: "\e904";
+  }
+  .icon-expand-arrows:before, .fa-expand-arrows:before {
+    content: "\e905";
+  }
+  .icon-calendar:before, .fa-calendar:before {
+    content: "\e906";
+  }
+  .icon-map-marker-alt:before, .fa-map-marker-alt:before {
+    content: "\e907";
+  }
+  .icon-instagram:before, .fa-instagram:before {
+    content: "\e908";
+  }
+  .icon-yelp:before, .fa-yelp:before {
+    content: "\e909";
+  }
+  .icon-twitter:before, .fa-twitter:before {
+    content: "\e90a";
+  }
+  .icon-facebook:before, .fa-facebook:before {
+    content: "\e90b";
+  }
+  .icon-long-arrow-left:before, .fa-long-arrow-left:before {
+    content: "\e90c";
+  }
+  .icon-cogs:before, .fa-cogs:before {
+    content: "\e90d";
+  }
+  .icon-user:before, .fa-user:before {
+    content: "\e90e";
+  }
+  .icon-calendar-check:before, .fa-calendar-check:before {
+    content: "\e90f";
+  }
+  .icon-long-arrow-right:before, .fa-long-arrow-right:before {
+    content: "\e910";
+  }
+  .icon-angle-right:before, .fa-angle-right:before {
+    content: "\e911";
+  }
+  .icon-minus:before, .fa-minus:before {
+    content: "\e912";
+  }
+  .icon-plus:before, .fa-plus:before {
+    content: "\e913";
+  }
+  .icon-user-o:before, .fas.fa-user:before {
+    content: "\e914";
+  }
+
+
+.fa, .fab, .fas, .fal, .far {
+  font-family: icomoon!important;
+  speak: never;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa, .fas {
+  font-weight: 900;
+}
+
+.fal {
+  font-weight: 300;
+}
+
+
+
+$stol-bold: 'Stolzl Bold';
+$stol-med: 'Stolzl Medium';
+$stol-reg: 'Stolzl Regular';
+$pro-bold: 'Proxima Nova Bold';
+$mont-reg: 'Montserrat Regular';
+
+$font-main: 'Stolzl Regular';
+$font-heading: 'Stolzl Bold';
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS 
+}
+
+p {
+    font-family: $stol-reg;
+    font-size: 14px;
+    line-height: 2;
+    color: rgba(#000, 0.5);
+    margin-top: 0;
+    margin-bottom: 30px;
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+// reset
+a {
+    @include animate-fade;
+    text-decoration: none;
+    background-color: transparent;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button, input, textarea {
+    &:focus {
+        outline: none!important;
+    }
+}
+
+button, input, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    border-radius: 0;
+}
+button, input[type="submit"], input[type="button"] {
+  @include animate-fade;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0;
+    margin: 0;
+    font-weight: 500;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    @include animate-fade;
+    vertical-align: middle;
+}
+
+i {
+  font-style: normal;
+}

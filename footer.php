@@ -140,23 +140,38 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div>
 	<!-- /#cookie-notice -->
 
-	<!-- Modal -->
-	<div class="modal fade" id="tooltip-modal" tabindex="-1" role="dialog" aria-labelledby="tooltip-modalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-			<div class="modal-content">
-			<div class="modal-body">
+	<div id="fixed-cta">
+		
+		<?php 
+		$values = get_field( 'phone_number_city' );
+		if ( $values ) { ?>
+
+			<a href="tel:<?php the_field('phone_number_city') ?>">
+				<em><i class="fal fa-phone-alt"></i></em>
+				<div class="phone-text">
+					<small class="label">Get a Free Estimate</small>
+					<span><?php the_field('phone_number_city') ?></span>
+				</div>
+				<!-- // text  -->
+			</a>
+
+		<?php 
+		} else { ?>
+
+			<a href="tel:<?php the_field('phone_number_general_cta', 'options') ?>">
+				<em><i class="fal fa-phone-alt"></i></em>
+				<div class="phone-text">
+					<small class="label">Get a Free Estimate</small>
+					<span><?php the_field('phone_number_general_cta', 'options') ?></span>
+				</div>
+				<!-- // text  -->
+			</a>
 			
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true"><i class="fal fa-times"></i></span>
-				</button>
+		<?php } ?>
 
-				<?php the_field('tooltip_content_modal', 'options'); ?>
 
-			</div>
-			<!-- // body  -->
-			</div>
-		</div>
-	</div>		
+	</div>
+	<!-- // fixed cta  -->	
 
 	<?php wp_footer(); ?>
 

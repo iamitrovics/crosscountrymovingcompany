@@ -1,0 +1,272 @@
+//Contact Page
+#contact-inner {
+    padding-top: 30px;
+    padding-bottom: 185px;
+    background: url(../img/bg/contact-bg.svg) top 95px center no-repeat;
+    position: relative;
+    @include bp(desktop) {
+        padding-bottom: 140px;
+    }
+    @include bp(lg) {
+        padding-bottom: 80px;
+    }
+    @include bp(md) {
+        padding-bottom: 50px!important;
+    }
+    @include bp(sm-down) {
+        padding-bottom: 40px!important;
+    }
+    &:after {
+        content: '';
+        display: block;
+        width: 180px;
+        height: 180px;
+        background: #ee8c21;
+        opacity: 0.62;
+        position: absolute;
+        bottom: -70px;
+        left: calc(50% + 55px);
+        border-radius: 50%;
+        @include bp(lg-down) {
+            display: none;
+        }
+    }
+    @include bp(sm-down) {
+        padding-top: 30px;
+        padding-bottom: 90px;
+    }
+    h1 {
+        @include page-title;
+        margin-bottom: 120px;
+        text-align: center;
+        text-transform: uppercase;
+        @include bp(desktop) {
+            margin-bottom: 100px;
+        }
+        @include bp(lg) {
+            margin-bottom: 80px;
+        }
+        @include bp(md) {
+            margin-bottom: 60px;
+        }
+        @include bp(sm-down) {
+            margin-bottom: 50px;
+        }
+    }
+    .contact-title {
+        display: block;
+        @include subheading-font;
+        font-family: $stol-bold;
+        margin-bottom: 50px;
+        @include bp(lg) {
+            margin-bottom: 40px;
+        }
+        @include bp(md) {
+            margin-bottom: 30px;
+        }
+        @include bp(sm-down) {
+            margin-bottom: 20px;
+        }
+    }
+
+    .contact-in {
+        max-width: 1270px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        .contact-icons {
+            margin-top: 15px;
+            @include bp(md-down) {
+                margin-top: 40px;
+            }
+            a {
+                padding-left: 100px;
+                position: relative;
+                font-family: $stol-reg;
+                font-size: 1.438em;
+                line-height: 1.217;
+                text-align: left;
+                color: #040000;
+                display: block;
+                margin-bottom: 68px;
+                @include bp(desktop) {
+                    font-size: 1.3em;
+                    padding-left: 90px;
+                    margin-bottom: 60px;
+                }
+                @include bp(lg) {
+                    font-size: 1.2em;
+                    padding-left: 80px;
+                    margin-bottom: 50px;
+                }
+                @include bp(md) {
+                    font-size: 1.1em;
+                    padding-left: 70px;
+                    margin-bottom: 40px;
+                }
+                @include bp(sm-down) {
+                    font-size: 0.82em;
+                    padding-left: 55px;
+                    margin-bottom: 40px;
+                }
+                &:nth-of-type(even){
+                    i {
+                        background: $dark;
+                    }
+                }
+                i {
+                    @include centre(y);
+                    left: 0;
+                    width: 56px;
+                    height: 56px;
+                    line-height: 56px;
+                    background: $orange;
+                    border-radius: 50%;
+                    font-size: 32px;
+                    text-align: center;
+                    color: #fff;
+                    @include bp(desktop) {
+                        width: 50px;
+                        height: 50px;
+                        line-height: 50px;
+                        font-size: 28px;
+                    }
+                    @include bp(lg) {
+                        width: 46px;
+                        height: 46px;
+                        line-height: 46px;
+                        font-size: 24px;
+                    }
+                    @include bp(md) {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 22px;
+                    }
+                    @include bp(sm-down) {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 22px;
+                    }
+                }
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+        .contact-form {
+            margin-top: 45px;
+            position: relative;
+            form {
+                .bootstrap-select {
+                    width: 100%;
+                }
+                .row {
+                    @include bp(lg-up) {
+                        margin-left: -47px;
+                        margin-right: -47px;
+                    }
+                }
+                [class*="col-"] {
+                    @include bp(lg-up) {
+                        padding-left: 47px;
+                        padding-right: 47px;
+                    }
+                    &:last-of-type {
+                        @include bp(lg-up) {
+                            text-align: right;
+                        }
+                    }
+                }
+                .form-group {
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 40px;
+                    @include bp(sm-down) {
+                        margin-bottom: 30px;
+                    }
+                    i {
+                        @include centre(y);
+                        left: 20px;
+                        font-size: 22px;
+                        color: $dark2;
+                    }
+                }
+                input[type=text],
+                input[type=email],
+                input[type=tel],
+                input[type=number],
+                textarea,
+                .bootstrap-select .btn {
+                    @include input-style;
+                    height: 68px;
+                }
+                button[type="submit"] {
+                    @include orange-btn;
+                    margin-right: 58px;
+                    @include bp(lg-down) {
+                        margin-right: 0;
+                    }
+                }
+                .contact-info {
+                    input[type=text],
+                    input[type=email],
+                    input[type=tel],
+                    input[type=number],
+                    textarea,
+                    .bootstrap-select .btn {
+                       
+                    }
+                }
+                textarea {
+                    padding-top: 17px;
+                    padding-bottom: 17px;
+                    overflow: hidden;
+                    min-height: 68px!important;
+                    @include bp(lg) {
+                        padding-top: 19px;
+                        padding-bottom: 19px;
+                    }
+                    @include bp(sm-down) {
+                        padding-top: 16px;
+                        min-height: 55px!important;
+                    }
+                }
+            }
+            .abh-circles {
+                position: absolute;
+                z-index: -1;
+                bottom: -60px;
+                left: -220px;
+                width: 260px;
+                height: 170px;
+                background-color: #fff;
+                @include bp(desktop) {
+                    left: -100px;
+                    bottom: -150px;
+                }
+                @include bp(lg) {
+                    display: none;
+                }
+                .orange-circle {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    background-color: $orange;
+                    position: relative;
+                }
+                .white-circle {
+                    width: 156px;
+                    height: 156px;
+                    border-radius: 50%;
+                    background: #696d77;
+                    mix-blend-mode: screen;
+                    position: absolute;
+                    left: 104px;
+                    top: 11px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+//CITY
+.cities-page {
+    #services-detailed {
+        padding-bottom: 90px;
+        @include bp(desktop) {
+            padding-bottom: 80px;
+        }
+        @include bp(lg) {
+            padding-bottom: 70px;
+        }
+        @include bp(md) {
+            padding-bottom: 60px;
+        }
+        @include bp(sm-down) {
+            padding-bottom: 50px;
+        }
+    }
+    #bottom-cta {
+        padding-top: 145px;
+        padding-bottom: 105px;
+        position: relative;
+        min-height: auto;
+        margin-bottom: 0!important;
+        @include bp(desktop) {
+            padding-top: 120px;
+            padding-bottom: 90px;
+        }
+        @include bp(lg) {
+            padding-top: 100px;
+            padding-bottom: 80px;
+        }
+        @include bp(md) {
+            padding-top: 80px;
+            padding-bottom: 70px;
+        }
+        @include bp(sm-down) {
+            padding-top: 55px;
+            padding-bottom: 40px;
+        }
+        h2 {
+            margin-bottom: 60px;
+            font-size: 3em;
+            @include bp(md) {
+                margin-bottom: 40px;
+            }
+            @include bp(sm-down) {
+                margin-bottom: 30px;
+                font-size: 2em;
+            }
+        }
+        &:before {
+            display: block;
+            content: '';
+            width: 180px;
+            height: 180px;
+            background: $orange;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(50% + 55px);
+            top: -90px;
+            z-index: 1;
+            @include bp(sm-down) {
+                display: none!important;
+            }
+        }
+        &:after {
+            position: absolute;
+            bottom: 32px;
+            right: 0;
+            content: '';
+            display: block;
+            width: 44vw;
+            height: 1px;
+            background: $orange;
+            @include bp(sm-down) {
+                display: none!important;
+            }
+        }
+        .bottom-cta-text {
+            position: relative;
+            &:after {
+                position: absolute;
+                right: -120px;
+                top: -120px;
+                content: '';
+                display: block;
+                width: 268px;
+                height: 268px;
+                background: #22252B;
+                border-radius: 50%;
+                mix-blend-mode: screen;
+                @include bp(desktop) {
+                    right: 0;
+                    width: 200px;
+                    height: 200px;
+                }
+                @include bp(lg-down) {
+                    right: 0;
+                    width: 200px;
+                    height: 200px;
+                }
+                @include bp(sm-down) {
+                    top: -60px;
+                    right: 0;
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+            h3 {
+                color:$orange;
+                font-size: 2em;
+                margin-bottom: 30px;
+                @include bp(sm-down) {
+                    font-size: 1.75em;
+                }
+            }
+            ul {
+                padding-left: 20px;
+                margin-bottom: 30px;
+                @include list-style;
+                li {
+                    color:$white;
+                    &:before {
+                        color:$orange;
+                    }
+                }
+            }
+            p {
+                color: rgba(#fff, 0.91);
+                font-size: 1.250em;
+                line-height: 1.4;
+                @include bp(lg) {
+                    font-size: 1.2em;
+                }
+                @include bp(md) {
+                    font-size: 1.1em;
+                }
+                @include bp(sm-down) {
+                    font-size: 1em;
+                }
+                a {
+                    color:$orange;
+                }
+            }
+        }
+    }
+}
+
+#masheader .city-hero--text {
+    p {
+        max-width: 650px;
+    }
+}
+
+.city-images {
+    img {
+        object-fit: cover;
+        max-height: 600px;
+    }
+}
+
+
+#services-page {
+    #services-detailed {
+        .city-detailed {
+            padding-top: 50px;
+            h2 {
+                font-size: 3em;
+                margin-bottom: 30px;
+                @include bp(sm-down) {
+                    font-size: 2em;
+                }
+            }
+            h3 {
+                font-size: 2.5em;
+                line-height: 1.3;
+                @include bp(sm-down) {
+                    font-size: 1.75em;
+                }
+            }
+            p {
+                a {
+                    color:$orange;
+                }
+            }
+        }
+    }
+}
