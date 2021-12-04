@@ -2,8 +2,7 @@
 
 @font-face {
     font-family: 'Stolzl Bold';
-    src: url('../fonts/Stolzl-Bold.woff2') format('woff2'),
-        url('../fonts/Stolzl-Bold.woff') format('woff');
+    src: url('../fonts/Stolzl-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -11,8 +10,7 @@
 
 @font-face {
     font-family: 'Stolzl Medium';
-    src: url('../fonts/Stolzl-Medium.woff2') format('woff2'),
-        url('../fonts/Stolzl-Medium.woff') format('woff');
+    src: url('../fonts/Stolzl-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -20,30 +18,27 @@
 
 @font-face {
     font-family: 'Stolzl Regular';
-    src: url('../fonts/Stolzl-Regular.woff2') format('woff2'),
-        url('../fonts/Stolzl-Regular.woff') format('woff');
+    src: url('../fonts/Stolzl-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
-
-@font-face {
-    font-family: 'Proxima Nova Bold';
-    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'),
-        url('../fonts/ProximaNova-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
 
 @font-face {
     font-family: 'Montserrat Regular';
-    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-        url('../fonts/Montserrat-Regular.woff') format('woff');
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
+
+
+$stol-bold: 'Stolzl Bold';
+$stol-med: 'Stolzl Medium';
+$stol-reg: 'Stolzl Regular';
+$mont-reg: 'Montserrat Regular';
+
+$font-main: 'Stolzl Regular';
+$font-heading: 'Stolzl Bold';
 
 @font-face {
     font-family: 'icomoon';
@@ -169,14 +164,6 @@
 
 
 
-$stol-bold: 'Stolzl Bold';
-$stol-med: 'Stolzl Medium';
-$stol-reg: 'Stolzl Regular';
-$pro-bold: 'Proxima Nova Bold';
-$mont-reg: 'Montserrat Regular';
-
-$font-main: 'Stolzl Regular';
-$font-heading: 'Stolzl Bold';
 
 *, :after, :before {
   -webkit-box-sizing: border-box;
