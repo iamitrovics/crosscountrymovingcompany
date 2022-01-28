@@ -191,7 +191,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                                                     <div class="col-lg-4 col-md-6">
                                                         <div class="review-box">
                                                             <div class="review-author">
-                                                                <img src="<?php bloginfo('template_directory'); ?>/img/misc/avatar.jpg" alt="">
                                                                 <div class="author-info">
                                                                     <div class="star-area">
                                                                         <span class="mr-star-rating"> 
