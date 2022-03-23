@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
         <div class="caption">
             <div class="container container-new">
                 <div class="image-artwork-mob">
-                    <img src="img/headers/moving-artwork.jpg" alt="">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/headers/moving-artwork.jpg" alt="">
                 </div>
                 <!-- /.image-artwork-mob -->
                 <h1><?php the_field('main_title_service_single_header'); ?></h1>
