@@ -193,14 +193,14 @@
     right: -280px;
     top: 0px;   
     @include bp(desktop) {
-        right:180px;
+        right:-180px;
         width: 550px;
     }
     @include bp(lg) {
-        right: 0px;
+        right: -120px;
         top: 0;
         width: 450px;
-        opacity: 0.3;        
+        opacity: 0.35;        
     }     
     @include bp(md) {
         right: 0px;
