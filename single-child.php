@@ -16,6 +16,15 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <div class="col-lg-8 offset-lg-2">
 
                     <div class="blog-detailed--intro">
+
+                        <?php
+                        $imageID = get_field('header_image_hero_parent_child');
+                        $image = wp_get_attachment_image_src( $imageID, 'why-image' );
+                        $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                        ?> 
+
+                        <img class="img-responsive hero-image--city" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+
                         <div class="row">
                             <div class="col-md-10">
                                 <div class="blog-info">

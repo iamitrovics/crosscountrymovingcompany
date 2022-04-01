@@ -186,3 +186,33 @@
         }
     }
 }
+
+.hero-image--city {
+    border-radius: 100%;
+    position: absolute;
+    right: -280px;
+    top: 0px;   
+    @include bp(desktop) {
+        right:180px;
+        width: 550px;
+    }
+    @include bp(lg) {
+        right: 0px;
+        top: 0;
+        width: 450px;
+        opacity: 0.3;        
+    }     
+    @include bp(md) {
+        right: 0px;
+        top: 0;
+        width: 350px;
+        opacity: 0.3;        
+    }
+    @include bp(sm-down) {
+        @include clear-pos;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        width: 100%;
+        right:auto;
+    }
+}
