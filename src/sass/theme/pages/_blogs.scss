@@ -1940,6 +1940,7 @@
                     img {
                         @include centre(both);
                         filter: brightness(0) invert(1);
+                        width: 34px;
                     }                
                 }
                 span {
@@ -1950,8 +1951,17 @@
                     line-height: 1.222;
                     color: $dark2;
                     @include animate-fade;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                    display: block;
+                    @include bp(md) {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
                     @include bp(sm-down) {
                         font-size: 1em;
+                        padding-left: 10px;
+                        padding-right: 10px;
                     }                    
                 }
             }
