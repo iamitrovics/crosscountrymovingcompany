@@ -134,3 +134,4 @@ function skip_mail_when_testing($f){
     return $handler->getIP() == '206.189.212.83'; //testing Bot IP address
 }
 add_filter('wpcf7_skip_mail','skip_mail_when_testing');
+

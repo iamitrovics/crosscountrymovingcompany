@@ -67,25 +67,38 @@ $container = get_theme_mod( 'understrap_container_type' );
                                     <button type="button" class="next-arrowx"><i class="fal fa-long-arrow-right"></i></button>
                                     <!-- /.next-arrow -->
                                 </div>
-                                <!-- /.slider-nav -->                            
+                                <!-- /.slider-nav -->      
+
                                 <div id="nav-slider">
-                                    <?php if( have_rows('list_of_posts_parent') ): ?>
-                                        <?php while( have_rows('list_of_posts_parent') ): the_row(); ?>
 
-                                            <div class="item">
-                                                <div class="nav-col">
-                                                    <a href="<?php the_sub_field('link_to_post'); ?>">
-                                                        <div class="icon">
-                                                            <img src="<?php the_sub_field('icon'); ?>" alt="">
-                                                        </div>
-                                                        <span><?php the_sub_field('label'); ?></span>
-                                                    </a>
+                                    <?php
+                                    $featured_posts = get_field('list_of_connected_posts');
+                                    if( $featured_posts ): ?>
+                                        <!-- <ul> -->
+                                        <?php foreach( $featured_posts as $post ): 
+
+                                            // Setup this post for WP functions (variable must be named $post).
+                                            setup_postdata($post); ?>
+
+                                                <div class="item">
+                                                    <div class="nav-col">
+                                                        <a href="<?php echo get_permalink(); ?>">
+                                                            <div class="icon">
+                                                                <img src="<?php the_field('icon_city_child'); ?>" alt="">
+                                                            </div>
+                                                            <span><?php the_field('label_city_child'); ?></span>
+                                                        </a>
+                                                    </div>
+                                                    <!-- // col  -->
                                                 </div>
-                                                <!-- // col  -->
-                                            </div>
 
-                                        <?php endwhile; ?>
-                                    <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <!-- </ul> -->
+                                        <?php 
+                                        // Reset the global post object so that the rest of the page works correctly.
+                                        wp_reset_postdata(); ?>
+                                    <?php endif; ?>                                
+
                                 </div>
                                 <!-- // nav  -->
                             </div>
@@ -486,6 +499,17 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
     <!-- // advanced-posts  -->
 
+<script>
+    jQuery(function($) {
+    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
+    $('#post-nav a').each(function() {
+    if (this.href === path) {
+    $(this).addClass('active');
+    }
+    });
+    });
+</script>
+    
    
 <?php
 get_footer(); ?>
