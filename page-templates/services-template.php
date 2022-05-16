@@ -14,7 +14,7 @@ get_header();
         <div class="caption">
             <div class="container container-new">
                 <div class="image-artwork-mob">
-                    <img src="<?php bloginfo('template_directory'); ?>/img/headers/homepage-artwork.png" alt="">
+                    <img src="<?php the_field('header_image_serv_lp'); ?>" alt="">
                 </div>
                 <!-- /.image-artwork-mob -->
                 <h1><?php the_field('main_title_hero_services_page'); ?></h1>
@@ -32,7 +32,7 @@ get_header();
         </div>
         <!-- /.caption -->
         <div class="image-artwork">
-            <img src="<?php bloginfo('template_directory'); ?>/img/headers/homepage-artwork.png" alt="">
+            <img src="<?php the_field('header_image_serv_lp'); ?>" alt="">
         </div>
         <!-- /.image-artwork -->
     
