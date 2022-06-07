@@ -52,6 +52,7 @@ if ( ! function_exists( 'understrap_setup' ) ) {
 				'quickmenu' => __( 'Quick Menu', 'understrap' ),
 				'tosmenu' => __( 'TOS Menu', 'understrap' ),
 				'citymenu' => __( 'City Menu', 'understrap' ),
+				'mobile' => __( 'Mobile Menu', 'understrap' ),
 			)
 		);
 
