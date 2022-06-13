@@ -153,7 +153,7 @@ get_header();
 				<div class="row">
 					<div class="col-md-12">
 						<div class="review-circles">
-							<img src="img/bg/review-circles.svg" alt="">
+							<img src="<?php bloginfo('template_directory'); ?>/img/bg/review-circles.svg" alt="">
 						</div>
 						<!-- /.review-circles -->
 					</div>
