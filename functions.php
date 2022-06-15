@@ -131,3 +131,35 @@ function smartwp_remove_wp_block_library_css(){
     wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
 } 
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
+function cf7_post_to_third_party($form)
+{
+    $formMappings = array(
+        'first_name' => array('your-first'),
+		'last_name' => array('your-last'),
+		'email' => array('your-email'),
+		'phone' => array('your-tel'),
+		'move_date' => array('your-date'),
+		'move_size' => array('home-size'),
+		'from_zip' => array('zip-from'),
+		'to_zip' => array('zip-to'),
+		'car_trailer' => array('your-trailer'),
+		'car_make' => array('car-make'),
+		'car_model' => array('car-model'),
+		'car_year' => array('car-year'),
+        'source_details[url]' => array('dynamichidden-672'),
+        'source_details[title]' => array('dynamichidden-673')
+    );
+    $handler = new MovingSoftFormHandler($formMappings);
+    $handler->setOrigin('http://crosscountrymovingcompany.net')->handleCF7($form, [62880, 62857, 62855, 62851]);
+}
+add_action('wpcf7_mail_sent', 'cf7_post_to_third_party', 10, 1);
+
+
+function skip_mail_when_testing($f){
+    $submission = WPCF7_Submission::get_instance();
+    $handler = new MovingSoftFormHandler();
+    
+    return $handler->getIP() == '206.189.212.83'; //testing Bot IP address
+}
+add_filter('wpcf7_skip_mail','skip_mail_when_testing');
