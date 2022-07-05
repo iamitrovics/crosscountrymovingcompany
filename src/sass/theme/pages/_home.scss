@@ -845,6 +845,9 @@
             object-fit: cover;
             height: 520px;
             width: 100%;
+            @include bp(md) {
+                height: 350px;
+            }
             @include bp(sm-down) {
                 height: 300px;
             }

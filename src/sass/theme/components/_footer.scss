@@ -414,3 +414,91 @@
       transform: scale(1);
     }
   }
+
+.fixed-pdf {
+    position: fixed;
+    bottom:10px;
+    left:10px;
+    background:$orange;
+    border-radius: 4px;
+    z-index:9999;
+    @include animate-fade;
+	border-radius: 25px;
+	box-shadow: 0 15px 45px #ffaa004d;
+    &:hover {
+		background:$orange;
+        span, small {
+            color:$black!important;
+        }
+		i {
+			color:$black;
+		}
+		img {
+			filter: none;
+		}
+    }
+    @include bp(sm-down) {
+        left:20px;
+        bottom:20px;
+        width: 80px;
+		width: 70px;
+		height: 70px;
+    }	
+    a {
+        padding-left: 70px;
+        padding-right: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: block;      
+		text-align: center;  
+        @include bp(sm-down) {
+            padding:0px;
+			width: 100%;
+			height: 100%;
+        }
+    }	
+    i, img {
+        font-size: 32px;
+        @include centre(both);
+		@include animate-fade;
+		width: 44px;	
+		filter: brightness(0) invert(1);
+    }
+    em {
+        display: block;
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        @include centre(y);
+        color:$white;
+        font-size: 24px;
+        left:15px;        
+        @include bp(sm-down) {
+			width: 100%;
+			height: 100%;
+			@include centre(both);
+        }
+    }	
+	.cta-text {
+		span {
+			display: block;
+			color:$white;
+			font-size: 26px;
+			line-height: 1;
+			@include animate-fade;
+			@include bp(sm-down) {
+				display: none;
+			}
+		}
+		small {
+			font-size: 16px;
+			color:$white;
+			display: block;
+			line-height: 1.3;
+			@include animate-fade;
+			@include bp(sm-down) {
+				display: none;
+			}		
+		} 
+	}
+  }

@@ -93,7 +93,7 @@
     }
     .call-btn {
         margin-left: auto;
-        @include bp(sm-down) {
+        @include bp(lg-down) {
             margin-right: 60px;
         }
         a {
@@ -776,7 +776,7 @@
     width: 35px;
     right: 15px;
     display: none;
-    @include bp(md-down) {
+    @include bp(lg-down) {
         display: block;
     }
     a {
