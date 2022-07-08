@@ -163,3 +163,24 @@ function skip_mail_when_testing($f){
     return $handler->getIP() == '206.189.212.83'; //testing Bot IP address
 }
 add_filter('wpcf7_skip_mail','skip_mail_when_testing');
+
+
+if ( !function_exists( 'xxx_remove_attachment_permalink' ) ) {
+    function xxx_remove_attachment_permalink( $rules ) {
+        foreach ( $rules as $regex => $query ) {
+            if ( strpos( $regex, 'attachment' ) || strpos( $query, 'attachment' ) ) {
+                unset( $rules[ $regex ] );
+            }
+        }
+
+        return $rules;
+    }
+    add_filter( 'rewrite_rules_array', 'xxx_remove_attachment_permalink' );
+}
+
+if ( !function_exists( 'xxx_remove_attachment_link' ) ) {
+    function xxx_remove_attachment_link( $link ) {
+        return;
+    }
+    add_filter( 'attachment_link', 'xxx_remove_attachment_link' );
+}
