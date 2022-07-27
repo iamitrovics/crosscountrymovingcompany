@@ -87,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<!-- /.col-lg-6 -->	
 				<div class="col-lg-6">
 					<div class="copy-bar--links">
-						<?php wp_nav_menu( array( 'theme_location' => 'tosmenu' ) ); ?>
+						<small>Created by <a href="https://madeonline.com/" target="_blank">Made Online <img src="<?php bloginfo('template_directory'); ?>/img/ico/md-logo.webp" alt=""></a></small>
 					</div>
 					<!-- /.copy-bar--links -->	
 				</div>
